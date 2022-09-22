@@ -1,0 +1,24 @@
+.item {
+  margin-top: 20px;
+}
+.item::before {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #555;
+}
+select {
+  display: block;
+  width: 100%;
+}
+table {
+  width: 100%;
+  font-size: 12px;
+  margin: 15px 0;
+}
+td {
+  border: 1px solid black;
+}
+.container1 {
+  padding: 20px;
+}
