@@ -9,5 +9,6 @@ function get_filenames($dirname){
         }
 
     }
+    sort($filenames);
     return $filenames;
 }

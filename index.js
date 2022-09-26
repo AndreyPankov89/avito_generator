@@ -90,7 +90,7 @@ const add_item = async () => {
             const chkbx = document.createElement("input");
             chkbx.type = "checkbox";
             chkbx.classList.add("row_chk");
-            chkbx.checked = document.getElementById('checkbox').checked;
+            chkbx.checked = document.getElementById('checkall').checked;
             td.appendChild(chkbx);
             template.appendChild(td);
 
@@ -219,7 +219,7 @@ const load_table = async()=>{
             let btn = document.createElement('button');
             btn.innerHTML = "e";
             btn.addEventListener('click',()=>{
-                edit_row(row[0])
+                edit_row(row[1])
             })
             td.appendChild(btn);
             tr.appendChild(td);
@@ -227,7 +227,7 @@ const load_table = async()=>{
             btn = document.createElement('button');
             btn.innerHTML = "d";
             btn.addEventListener('click',()=>{
-                delete_row(row[0])
+                delete_row(row[1])
             })
             td.appendChild(btn);
             tr.appendChild(td);
@@ -244,12 +244,12 @@ const delete_row = (id)=>{
 
 const edit_row = (id)=>{
     const row = Array.from(document.getElementById(id).getElementsByTagName('td'));
-    let title = row[1].innerHTML;
-    let price = row[4].innerHTML;
+    let title = row[2].innerHTML;
+    let price = row[5].innerHTML;
     title = prompt("Заголовок", title);
     price = prompt("Цена", price);
-    row[1].innerHTML = title;
-    row[4].innerHTML = price;
+    row[2].innerHTML = title;
+    row[5].innerHTML = price;
     save_table();
 }
 

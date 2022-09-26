@@ -3,7 +3,7 @@
     $data =json_decode($jsondata,true);
     require_once __DIR__ . '/PHPExcel-1.8/Classes/PHPExcel.php';
     require_once __DIR__ . '/PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007.php';
-    
+    //var_dump($data);
     require_once './get_text.php';
     require_once 'get_img_list.php';
     $xls = new PHPExcel();
@@ -38,7 +38,7 @@
         //var_dump($item);
  
     $end_date = date("Y-m-d",strtotime($cur_date.' + '.$item['days_count'].' days'));
-        $sheet->setCellValueByColumnAndRow(0,$i, $item["id"]);
+        $sheet->setCellValueByColumnAndRow(0,$i, uniqid());//;$item["id"]);
         $sheet->setCellValueByColumnAndRow(1,$i, "Ремонт и строительство");
         $sheet->setCellValueByColumnAndRow(2,$i, "Стройматериалы");
         $sheet->setCellValueByColumnAndRow(3,$i, $item["place"]);

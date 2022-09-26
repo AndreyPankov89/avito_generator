@@ -166,7 +166,7 @@
                     <option value="Крепеж">Крепеж</option>
                     <option value="Кровля и водосток">Кровля и водосток</option>
                     <option value="Лаки и краски">Лаки и краски</option>
-                    <option value="Одделка">Одделка</option>
+                    <option value="Отделка">Отделка</option>
                     <option value="Металлопрокат">Металлопрокат</option>
                     <option value="Пиломатериалы">Пиломатериалы</option>
                     <option value="Строительные смеси">Строительные смеси</option>
